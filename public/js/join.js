@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var loginForm = $("form.login");
+    // var loginForm = $("form.login");
 $("#join").on('click', function(event){
 event.preventDefault()
     var user = {

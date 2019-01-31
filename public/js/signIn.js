@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
     var loginForm = $("form.login");
+    // var loginForm = $(".login");
     var userInput = $("input#name-input");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
   
-    loginForm.on("submit", function(event) {
+    loginForm.on("click", function(event) {
       event.preventDefault();
       var userData = {
         username: userInput.val().trim(),
@@ -24,7 +25,7 @@ $(document).ready(function() {
     });
   
     function loginUser(username, email, password) {
-      $.post("/api/login", {
+      $.post("/api/signin", {
         username: username,  
         email: email,
         password: password
