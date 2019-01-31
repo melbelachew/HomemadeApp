@@ -14,9 +14,17 @@
 
 <body background = "image1.jpg">
         <div class="pure-menu pure-menu-horizontal">
-                <a href="#" class="pure-menu-heading pure-menu-link">Submit your recipe here</a>
-
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" id="menuLink1" class="pure-menu-link">Option</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a href="/recipes" class="pure-menu-link">New post</a></li>
+                            <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+    
             <div class="col-md-6 col-md-offset-3">
         <h3>Welcome <span class="user-name"></span></h2>
       </div>
@@ -34,7 +42,8 @@
 
                     <fieldset class="pure-group">
                         <input type="text" class="pure-input-1" placeholder="Title">
-                        <textarea class="pure-input-1" placeholder="Recipe"></textarea>
+                      
+                        <textarea id="editor" class="pure-input-1" placeholder="Recipe"></textarea>
                         <input type="text" class="pure-input-1" placeholder="Category">
                     </fieldset>
                 

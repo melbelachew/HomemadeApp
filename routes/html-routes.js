@@ -22,5 +22,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/recipes.html"));
   });
 
-
+  app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+  })
 };

@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     var loginForm = $("form.login");
+    // var loginForm = $(".login");
     var userInput = $("input#name-input");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
@@ -13,19 +14,23 @@ $(document).ready(function() {
         password: passwordInput.val().trim()
       };
   
-      if (!userData.username ||!userData.email || !userData.password) {
+      if (!userData.email || !userData.password) {
         return;
       }
   
-      loginUser(userData.username, userData.email, userData.password);
-      userInput.val("");
+      loginUser(
+        // userData.username, 
+        userData.email, userData.password);
+      // userInput.val("");
       emailInput.val("");
       passwordInput.val("");
     });
   
-    function loginUser(username, email, password) {
-      $.post("/api/login", {
-        username: username,  
+    function loginUser(
+      // username, 
+      email, password) {
+      $.post("/api/signin", {
+        // username: username,  
         email: email,
         password: password
       }).then(function(data) {

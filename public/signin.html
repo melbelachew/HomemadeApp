@@ -31,22 +31,22 @@
 
     <div class ="container"> 
 
-    <form class="pure-form pure-form-aligned">
+    <form class="login pure-form pure-form-aligned">
         <fieldset>
             
             <div class="pure-control-group">
                 <label for="name">Username</label>
-                <input id="name" type="text" placeholder="Username">
+                <input id="name-input" type="text" placeholder="Username">
             </div>
     
             <div class="pure-control-group">
                 <label for="password">Password</label>
-                <input id="password" type="password" placeholder="Password">
+                <input id="password-input" type="password" placeholder="Password">
             </div>
     
             <div class="pure-control-group">
                 <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="Email Address">
+                <input id="email-input" type="email" placeholder="Email Address">
             </div>
     
            
@@ -54,15 +54,17 @@
             <div class="pure-controls">
         
     
-                <button type="submit" class="pure-button pure-button-primary">Login</button>
-                <p>Or sign up <a href="/login">here</a></p>
+                <!-- <a href="/login"> -->
+                    <button type="submit" class="pure-button pure-button-primary login">Login</button>
+                <!-- </a> -->
+                <p>Or sign up <a href="/join">here</a></p>
             </div>
         </fieldset>
     </form>
 </div>
 </p>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="js/recipes.js"></script> -->
+  <script type="text/javascript" src="./js/signIn.js"></script>
 
 </body>
 
