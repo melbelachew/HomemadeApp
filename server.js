@@ -22,6 +22,16 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 //syncing database using sequelize & listening on port
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else{
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'hacktheplanet',
+    database: 'hohomemade_db'
+  })
+}
 db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
