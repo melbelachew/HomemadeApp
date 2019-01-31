@@ -4,6 +4,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var passport = require("./config/passport");
+var JAWSDB_URL = "mysql://k6tg0mq8vqjobqi9:abkz3r9dn45znot9@axxb6a0z2kydkco3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/kd5lljabzyw21eoo"
 
 // set port
 var PORT = process.env.PORT || 3000;
@@ -35,6 +36,6 @@ if (process.env.JAWSDB_URL){
 }
 db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser." + PORT);
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser."+ PORT);
   });
 });
