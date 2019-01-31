@@ -30,11 +30,11 @@ if (process.env.JAWSDB_URL){
     host: 'localhost',
     user: 'root',
     password: 'hacktheplanet',
-    database: 'hohomemade_db'
+    database: 'homemade_db'
   })
 }
 db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT);
   });
 });
