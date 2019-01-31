@@ -1,0 +1,23 @@
+.container {
+    margin:auto;
+    width: 60%;
+    border: 3px solid rgba(235, 207, 236, 0.507);
+    padding: 10px;
+    background-color: white; opacity: .8;
+ 
+
+}
+
+form :hover{
+    background-color: white;
+    color: rgb(8, 8, 8)
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+
+}
+
