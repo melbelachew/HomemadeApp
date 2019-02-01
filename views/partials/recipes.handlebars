@@ -1,5 +1,20 @@
 {{>header}}
 
+
+<h1>recipes list</h1>
+
+<h3>Your recipes</h3>
+
+<ul>
+    {{#each recipes}}
+    <li>
+        <p>ID: {{this.id}}</p>
+        <p>recipes: {{this.wish}}</p>
+    </li>
+    {{/each}}
+</ul>
+
+
 <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
         <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
