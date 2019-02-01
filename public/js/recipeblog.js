@@ -43,7 +43,7 @@ $(document).ready(function() {
     }
   })
   function submitRecipe(Recipe) {
-    $.recipe("/api/recipes/", Post, function() {
+    $.post("/api/recipes/", function() {
       window.location.href = "/recipes";
     });
   }
