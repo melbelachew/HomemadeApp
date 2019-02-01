@@ -22,6 +22,7 @@ app.use(passport.session());
 //requiring routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/recipe-routes")(app);
 
 //syncing database using sequelize & listening on port
 if (process.env.JAWSDB_URL){

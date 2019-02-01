@@ -18,9 +18,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signin.html"));
   });
 
+  app.get("/recipeblog", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/recipeblog.html"));
+  });
+
   app.get("/recipes", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/recipes.html"));
   });
+  
 
   app.get("/logout", function (req, res) {
     req.logout();
