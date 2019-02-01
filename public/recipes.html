@@ -9,6 +9,7 @@
   <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
@@ -18,7 +19,7 @@
                     <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <a href="#" id="menuLink1" class="pure-menu-link">Option</a>
                         <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a href="/recipes" class="pure-menu-link">New post</a></li>
+                            <li class="pure-menu-item"><a href="/recipeblog" class="pure-menu-link">New recipe</a></li>
                             <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
                         </ul>
                     </li>
@@ -26,7 +27,7 @@
             </div>
     
             <div class="col-md-6 col-md-offset-3">
-        <h3>Welcome <span class="user-name"></span></h2>
+        <h3>Welcome <span class="user-name"></span>!</h2>
       </div>
     <p>
         <br>
@@ -38,18 +39,27 @@
 
     <div class ="container"> 
 
-            <form class="pure-form">
+        <div class="form-group">
+            <select class="custom-select" id="category">
+              <option selected value="">All recipes</option>
+              <option value="Personal">Gluten free</option>
+              <option value="Product Review">Peanut free</option>
+              <option value="Political">Dairy free</option>
+              <option value="Political">Vegan</option>
+              <option value="Political">No restrictions</option>
+            </select>
+          </div>
+        
+          <div class="col-md-2">
+            <a class="btn btn-light" href="/recipeblog">New recipe</a>
+          </div>
+    </div>
 
-                    <fieldset class="pure-group">
-                        <input type="text" class="pure-input-1" placeholder="Title">
-                      
-                        <textarea id="editor" class="pure-input-1" placeholder="Recipe"></textarea>
-                        <input type="text" class="pure-input-1" placeholder="Category">
-                    </fieldset>
-                
-                    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Post</button>
-                </form>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="row">
+        <div class="col-md-12 recipe-container"> 
+        </div>
+        </div>
+  
   <script type="text/javascript" src="./js/recipes.js"></script>
 
 

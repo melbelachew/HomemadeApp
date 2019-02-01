@@ -11,24 +11,39 @@
   <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
-<body background = "image4.jpg">
+<body background = "image6.jpg">
 
     <div class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                 <a href="#" id="menuLink1" class="pure-menu-link">Option</a>
                 <ul class="pure-menu-children">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">New post</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Logout</a></li>
+                    <li class="pure-menu-item"><a href="/recipes" class="pure-menu-link">Recipes</a></li>
+                    <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
                 </ul>
             </li>
         </ul>
     </div>
-    <div class="row">
-        <div class="col-md-12 blog-container">
-        </div>
+
+        <div class ="container"> 
+
+            <form id = "rec" class="pure-form">
+
+                    <fieldset class="pure-group">
+                        <input id = "title" type="text" class="pure-input-1" placeholder="Title">
+                      
+                        <textarea id="editor body" class="pure-input-1" placeholder="Recipe"></textarea>
+                        <input id = "category" type="text" class="pure-input-1" placeholder="Category">
+                    </fieldset>
+                
+                    <div class="col-md-2">
+                        <a class="btn btn-light submit" href="/recipes">Submit</a>
+                      </div>
+                </form>
+    <div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
-  <script src="js/recipeblog.js" type="text/javascript"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="./js/recipeblog.js" type="text/javascript"></script>
 
 </body>
 
